@@ -99,7 +99,7 @@ Despite Google's warnings, it poses no threat to your personal data.
 
 ### View Calendar Events
 
-```sh
+```shell
 clinic view
 ```
 
@@ -111,7 +111,7 @@ clinic view
 
 ### Make a Booking
 
-```sh
+```shell
 clinic book
 ```
 
@@ -123,7 +123,7 @@ clinic book
 
 ### Create an Appointment Slot
 
-```sh
+```shell
 clinic volunteer
 ```
 
@@ -137,7 +137,7 @@ clinic volunteer
 
 ### Cancel a Booking
 
-```sh
+```shell
 clinic cancel_booking
 ```
 
@@ -147,7 +147,7 @@ clinic cancel_booking
 
 ### Cancel as a Volunteer
 
-```sh
+```shell
 clinic cancel_volunteer
 ```
 
@@ -185,7 +185,7 @@ Attempting to connect to www.googleapis.com without an internet connection crash
 
 ## To Test
 
-```sh
+```shell
 python3 -m unittest tests/<test_module_name.py>
 ```
 
@@ -209,3 +209,5 @@ GitHub: <https://github.com/vtitiJHB>
 
 Edward Noko  
 email: enoko@student.wethinkcode.co.za
+
+[Back to Contents](https://github.com/vtitiJHB/101-Fundamentals/README.md)
