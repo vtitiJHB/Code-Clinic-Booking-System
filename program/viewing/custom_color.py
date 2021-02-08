@@ -1,0 +1,67 @@
+
+class color:
+    # Reset
+    end = '\x1b[0m'
+
+    # Formatters
+    underlined = "\x1b[4m"
+    reverse = "\x1b[7m"
+    hidden = "\x1b[8m"
+    italic = "\x1b[3m"
+    blink = "\x1b[5m"
+    bold = "\x1b[1m"
+    dim = "\x1b[2m"
+
+    # Foreground
+    f_magenta = "\x1b[35m"
+    f_yellow = "\x1b[33m"
+    f_green = "\x1b[32m"
+    f_black = "\x1b[30m"
+    f_blue = "\x1b[34m"
+    f_cyan = "\x1b[36m"
+    f_gray = "\x1b[38m"
+    f_red = "\x1b[31m"
+    f_lightmagenta = "\x1b[95m"
+    f_lightyellow = "\x1b[93m"
+    f_lightgreen = "\x1b[92m"
+    f_lightgray = "\x1b[37m"
+    f_lightblue = "\x1b[94m"
+    f_lightcyan = "\x1b[96m"
+    f_lightred = "\x1b[91m"
+    f_darkgray = "\x1b[90m"
+    f_white = "\x1b[97m"
+
+    # Background
+    b_magenta = "\x1b[45m"
+    b_yellow = "\x1b[43m"
+    b_green = "\x1b[42m"
+    b_black = "\x1b[40m"
+    b_blue = "\x1b[44m"
+    b_cyan = "\x1b[46m"
+    b_red = "\x1b[41m"
+    b_lightmagenta = "\x1b[105m"
+    b_lightyellow = "\x1b[103m"
+    b_lightgreen = "\x1b[102m"
+    b_lightblue = "\x1b[104m"
+    b_lightcyan = "\x1b[106m"
+    b_lightgray = "\x1b[47m"
+    b_darkgray = "\x1b[100m"
+    b_lightred = "\x1b[101m"
+    b_white = "\x1b[107m"
+
+    # shortened due to high use
+    f_b_b_i_m = "\x1b[1;3;5;95m"
+    f_d_i_y = "\x1b[1;3;33m"
+    f_b_u_c = "\x1b[36;1;4m"
+    f_b_d_y = "\x1b[1;2;33m"
+    f_b_y = "\x1b[33;1;21m"
+    f_b_b_u = "\x1b[1;94m"
+    f_b_b = "\x1b[1;94m"
+    f_d_y = "\x1b[1;33m"
+    f_b_g = "\x1b[1;32m"
+    f_i_l = "\x1b[92;3m"
+    f_b_c = "\x1b[1;36m"
+    f_i_m = "\x1b[95;3m"
+    f_l_r = "\x1b[1;31m"
+    f_l_b = "\x1b[94m"
+    f_l_y = "\x1b[93m"

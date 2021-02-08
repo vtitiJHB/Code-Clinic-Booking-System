@@ -1,0 +1,7 @@
+# Don't track content of these folders
+# the path preceding the file / folder name does not nessesarily matter
+saves/
+tokens/
+calendar_data.ics
+__pycache__
+.DS_Store

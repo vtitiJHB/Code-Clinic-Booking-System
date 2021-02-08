@@ -1,0 +1,62 @@
+#!/usr/bin/env python3
+from os import system
+from sys import argv
+
+try:
+    from googleapiclient.discovery import build
+
+except ModuleNotFoundError:
+    system('pip3 install --user --upgrade google-api-python-client')
+    system('pip3 install --user --upgrade google-auth-httplib2')
+    system('pip3 install --user --upgrade google-auth-oauthlib')
+    from googleapiclient.discovery import build
+
+import program as p
+
+
+def main():
+    """
+    Call the functions that will initialize 
+    the relevant credentials, calendars, days, emails;
+    and handle the command-line arguments.
+    """ 
+    system('clear')
+
+    code_clinic_creds = p.call_admin_setup()
+
+    clinic_calendar = build( 'calendar', 'v3', credentials=code_clinic_creds )
+
+    days, user_email, user_creds = p.init_setup_call( clinic_calendar )
+
+    user_calendar = build( 'calendar', 'v3', credentials=user_creds )
+
+    clinic_email = "jhbcodingclinicteam6@gmail.com"
+
+    if len(argv) < 2:
+        print(p.get_help())
+
+    for command in argv[:0:-1]:
+
+        if '--reload' in command.lower():
+            p.remove_folder()
+
+        elif 'view' == command.lower():
+            p.p_view(clinic_calendar, days, user_calendar)
+
+        elif 'volunteer' == command.lower():
+            p.p_volunteer(clinic_calendar, days, user_email, clinic_email)
+
+        elif 'book' == command.lower():
+            p.p_booking(clinic_calendar, days, user_email, clinic_email)
+
+        elif 'cancel_booking' == command.lower():
+            p.p_cancel_booking(clinic_calendar, days, user_email)
+
+        elif 'cancel_volunteer' == command.lower():
+            p.p_cancel_volunteer(clinic_calendar, days, user_email)
+
+        else:
+            print(p.get_help())
+
+if __name__ == '__main__':
+    main()
